@@ -31,7 +31,7 @@ class _WidgetGoogleMapState extends State<WidgetGoogleMap> {
     super.initState();
     _determinePosition().then((value) {
       setState(() {
-        source = LatLng(42.662914, 21.165503);
+        source = LatLng(value.latitude, value.longitude);
       });
       sendRequest();
     });
